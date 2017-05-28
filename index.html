@@ -128,8 +128,8 @@
         }
         function ballHitPaddle(ball, paddle) {
             ball.animations.play('wobble');
+            ball.body.velocity.x = -1*5*(paddle.x-ball.x);
         }
-
         function startGame() {
             startButton.destroy();
             ball.body.velocity.set(150, -150);
